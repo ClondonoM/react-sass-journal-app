@@ -4,17 +4,13 @@ import { AuthRouter } from './AuthRouter';
 
 export const AppRouter = () => {
   return (
-    <div className='auth__main'>
-      <div className='auth__box-container'>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/auth/*' element={<AuthRouter />} />
-            <Route path='/' element={<JournalScreen />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/auth/*' element={<AuthRouter />} />
+        <Route path='/' element={<JournalScreen />} />
 
-            <Route path='*' element={<Navigate replace to='/auth/' />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-    </div>
+        <Route path='*' element={<Navigate replace to='/auth/' />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
