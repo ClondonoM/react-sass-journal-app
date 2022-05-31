@@ -1,5 +1,9 @@
 .journal__main-content {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100vw;
 }
 
 .journal__sidebar {
@@ -10,16 +14,16 @@
   height: 100vh;
   padding-left: 10px;
   padding-right: 10px;
-  width: 450px;
+  width: 30vw;
 }
 
 .journal__sidebar-navbar {
   display: flex;
   justify-content: space-between;
+}
 
-  &:h3 {
-    font-weight: lighter;
-  }
+.journal__sidebar-navbar h3 {
+  font-weight: lighter;
 }
 
 .journal__new-entry {
@@ -27,13 +31,12 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 30px;
   width: 100%;
+
   transition: color 0.3s ease;
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
+
   &:hover {
     color: darken($color: white, $amount: 20);
   }
@@ -48,10 +51,6 @@
 .journal__entry {
   background-color: white;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   color: $dark-gray;
   display: flex;
   margin-bottom: 10px;
@@ -64,14 +63,16 @@
 }
 
 .journal__entry-body {
-  paddign: 10px;
+  padding: 10px;
 }
+
 .journal__entry-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
 }
+
 .journal__entry-content {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .journal__entry-date-box {
@@ -83,5 +84,5 @@
 }
 
 .journal__entry-date-box span {
-  font: size 12px;
+  font-size: 12px;
 }
